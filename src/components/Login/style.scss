@@ -1,0 +1,63 @@
+.login__main-container {
+  display: flex;
+}
+
+.login__first-child-container {
+  background-color: blueviolet;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+}
+
+.login__second-child-container {
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  /* padding-left: 30px; */
+}
+.login__head-container {
+  padding-top: 80px;
+  padding-left: 70px;
+  padding-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.login__first-input-container {
+  padding-left: 70px;
+  color: grey;
+  font-size: 17px;
+  padding-bottom: 20px;
+  /* border: none; */
+}
+.login__input-heading-container {
+  padding-bottom: 10px;
+}
+.login__input-container {
+  padding: 5px;
+  width: 200px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+.login__checked-condition-container {
+  color: black;
+  font-family: bold;
+  display: flex;
+  padding-left: 70px;
+  padding-bottom: 30px;
+}
+/* .login__check-box-container {
+  background-color: gray;
+} */
+.login__submit-button {
+  background-color: #33adff;
+  border: none;
+  color: #ffffff;
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  font-size: 13px;
+  margin-left: 70px;
+}
