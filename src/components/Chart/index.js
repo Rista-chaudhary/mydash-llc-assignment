@@ -1,25 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BarChart } from "../BarChart";
+import BarChart from "../BarChart";
 import faker from "@faker-js/faker";
 
 const labels = ["January", "February", "March", "April", "May", "June", "July"];
 
-const data = {
-  labels,
-  datasets: [
-    {
-      label: "Dataset 1",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
-    },
-    {
-      label: "Dataset 2",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: "rgba(53, 162, 235, 0.5)",
-    },
-  ],
-};
+const data = [
+  { year: 2011, value: faker.datatype.number({ min: 1, max: 70 }) },
+  { year: 2012, value: faker.datatype.number({ min: 1, max: 70 }) },
+  { year: 2013, value: faker.datatype.number({ min: 1, max: 70 }) },
+  { year: 2014, value: faker.datatype.number({ min: 1, max: 70 }) },
+  { year: 2015, value: faker.datatype.number({ min: 1, max: 70 }) },
+  { year: 2016, value: faker.datatype.number({ min: 1, max: 70 }) },
+];
 
 export default function Chart() {
   const navigate = useNavigate();
@@ -41,21 +34,14 @@ export default function Chart() {
   }
 
   function handleChangeData() {
-    setChartData({
-      labels,
-      datasets: [
-        {
-          label: "Dataset 1",
-          data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-          backgroundColor: "rgba(255, 99, 132, 0.5)",
-        },
-        {
-          label: "Dataset 2",
-          data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-          backgroundColor: "rgba(53, 162, 235, 0.5)",
-        },
-      ],
-    });
+    setChartData([
+      { year: 2011, value: faker.datatype.number({ min: 1, max: 70 }) },
+      { year: 2012, value: faker.datatype.number({ min: 1, max: 70 }) },
+      { year: 2013, value: faker.datatype.number({ min: 1, max: 70 }) },
+      { year: 2014, value: faker.datatype.number({ min: 1, max: 70 }) },
+      { year: 2015, value: faker.datatype.number({ min: 1, max: 70 }) },
+      { year: 2016, value: faker.datatype.number({ min: 1, max: 70 }) },
+    ]);
   }
 
   return (
